@@ -6,26 +6,17 @@ async function testingone(){
     let driver = await new Builder().forBrowser("chrome").build();
     await driver.get("https://www.techlistic.com/p/selenium-practice-form.html");
     await driver.findElement(By.name("firstname")).sendKeys("Tejo",Key.RETURN);
-    driver.sleep(2000);
     await driver.findElement(By.name("lastname")).sendKeys("Djaya",Key.RETURN);
-    driver.sleep(2000);
     await driver.findElement(By.id("sex-0")).click();
-    driver.sleep(2000);
-    await driver.findElement(By.id("exp-2")).click();
-    driver.sleep(2000);
-    await driver.findElement(By.id("datepicker")).sendKeys("04-10-2021");
-    driver.sleep(2000);
+    await driver.findElement(By.id("exp-4")).click();
+    await driver.findElement(By.id("datepicker")).sendKeys("16-10-2020");
     await driver.findElement(By.id("profession-1")).click();
-    driver.sleep(2000);
     await driver.findElement(By.id("tool-2")).click();
-    driver.sleep(2000);
     await driver.findElement(By.id("continents")).click();
     dropdown = driver.findElement(By.id("continents"));
-    await dropdown.findElement(By.xpath("//option[. = 'Asia']")).click()
-    driver.sleep(2000);
+    await dropdown.findElement(By.xpath("//option[. = 'Europe']")).click()
     dropdown = driver.findElement(By.id("selenium_commands"));
     await dropdown.findElement(By.xpath("//option[. = 'Browser Commands']")).click();
-    driver.sleep(2000);
     await driver.findElement(By.id("submit")).click();
     await driver.quit();
 

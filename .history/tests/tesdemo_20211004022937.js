@@ -26,6 +26,11 @@ async function testingone(){
     dropdown = driver.findElement(By.id("selenium_commands"));
     await dropdown.findElement(By.xpath("//option[. = 'Browser Commands']")).click();
     driver.sleep(2000);
+    filename = "tes1.png"
+    file = File.join(Dir.pwd, filename);
+    upload = driver.findElement(By.name("photo"));
+    await upload.sendKeys(file);
+    driver.sleep(2000);
     await driver.findElement(By.id("submit")).click();
     await driver.quit();
 
